@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <button onclick="check()">Click</button>
+
+  <script>
+    function check() {
+      // Arry Methods 
+      // 1. map()
+      // This method creates a new array with the results of calling a provided function on every element in this array.
+      //   let arr = ["one", 2, "three", true, "five", 6, "seven"]
+      //   let a = arr.map(i => i+ "my arr");
+      // console.log(a)
+      // console.log(arr)
+
+      // 2. filter()
+      // This method creates a new array with only elements that passes the condition inside the provided function.
+      //   let arr = ["one", 2, "three", true, "five", 6, "seven", "five"]
+      //   let a = arr.filter(i => i === "five");
+      // console.log(a)
+      // console.log(arr)
+
+      // 3. sort()
+      // This method is used to arrange/sort array’s elements either in ascending or descending order.
+      // In my own exprience this also effect on original array
+      //   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      //   let a = arr.sort((a, b) => a > b ? -1 : 1);
+      // console.log("Change array ",a)
+      // console.log("Original array ",arr)
+
+      // 4. forEach( )
+      // This method helps to loop over array by executing a provided callback function for each element in an array.
+      //   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      //   arr.forEach(i => console.log(i));
+      // console.log("Original array ",arr)
+
+      // 5. concat( )
+      // This method is used to merge two or more arrays and returns a new array, without changing the existing arrays.
+      // let arr1 = ["a", "b", "c"];
+      // let arr2 = ["d", "e", "f"];
+      // let arr3 = arr1.concat(arr2);
+      // console.log("arr1",arr1)
+      // console.log("arr2",arr2)
+      // console.log("arr3",arr3)
+
+      // 6. every( )
+      // This method checks every element in the array that passes the condition, returning true or false as appropriate
+      // let arr = [11, 12, 13, 14, 15, 16, 17, 18, 19];
+      // let arr1 = arr.every(num => num > 10);
+      // console.log(arr1)
+
+      // 7. some( )
+      // This method checks if at least one element in the array that passes the condition, returning true or false as appropriate.
+      //   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // let arr1 = arr.some(num => num > 10);
+      // console.log(arr1)
+
+      // 8. includes( )
+      // This method checks if an array includes the element that passes the condition, returning true or false as appropriate.
+      // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      // console.log(arr.includes(1))
+
+      // 9. join( )
+      // This method returns a new string by concatenating all of the array’s elements separated by the specified separator.
+      // let arr = ["a", "b", "c", "d", "e", "f", "g"];
+      // console.log(arr.join(""));
+
+      // 10. reduce( )
+      // This method applies a function against an accumulator and each element in the array to reduce it to a single value.
+      //   let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // console.log(arr.reduce((previous, current) => previous + current)) ;
+      //   let arr = ["This","is", "my", "number"];
+      // console.log(arr.reduce((previous, current) => {
+      //  return previous + current ;
+      // })
+      // ) ;
+
+      // 11. find( )
+      // This method returns the value of the first element in an array that pass the test in a testing function.
+      // const arr = [1, 2, 3, 4, 5, 6, 7];
+      // const found = arr.find(a => a < 6);
+      // console.log(found)
+
+      // 12. findIndex( )
+      // This method returns the index of the first element in an array that pass the test in a testing function.
+      // const arr = ["one", "two", "three", "four", "five"];
+      // const found = arr.findIndex(e => e === "five");
+      // console.log(found);
+
+      // 13. indexOf( )
+      // This method returns the index of the first occurrence of the specified element in the array, or -1 if it is not found.
+      // const arr = ["one", "two","three","four", "five", "six"];
+      // const found = arr.indexOf("three");
+      // console.log(found);
+
+      // 14. fill( )
+      // This method fills the elements in an array with a static value and returns the modified array.
+      // const arr = new Array(4);
+      // console.log(arr)
+      // console.log(arr.fill(3))
+
+      // 15. slice( )
+      // This method returns a new array with specified start to end elements.
+      // const originalArray = [0 , 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // const sliceArray = originalArray.slice(3, -5);
+      // console.log(originalArray)
+      // console.log(sliceArray)
+
+      // 16. reverse( )
+      // This method reverses an array in place. Element at last index will be first and element at 0 index will be last.
+      // const arr = [0 , 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // console.log(arr.reverse())
+
+      // 17. push( )
+      // This method adds one or more elements to the end of array and returns the new length of the array.
+        // const arr = ["one", "two", "three", "four", "five"];
+        // arr.push("Zero", "Alpha");
+        // console.log(arr)
+
+// 18. pop( )
+// This method removes the last element from the end of array and returns that element.
+  // const arr = ["one", "two", "three", "four", "five"];
+  // arr.pop();
+  // console.log(arr)
+
+  // 19. shift( )
+  // This method removes the first element from an array and returns that element.
+  //  const arr = ["one", "two", "three", "four", "five"];
+  // arr.shift();
+  // console.log(arr)
+
+  // 20. unshift( )
+  // This method adds one or more elements to the beginning of an array and returns the new length of the array.
+   const arr = ["one", "two", "three", "four", "five"];
+  arr.unshift("Zero","double Zero");
+  console.log(arr)
+    }
+
+
+    // Classes in javascript
+    // class Car {
+    //   constructor(id, name, color){
+    //     this.id = id,
+    //     this.name = name,
+    //     this.color = color,
+    //     this.move(name, color);
+    //   }
+    //   move(a, r){
+    //   console.log(a, r)
+    //   }
+    // }
+    // const obj1 = new Car(1, "Parado", "Black");
+    // console.log(obj1);
+
+    // class Shape {
+    //     constructor (id, x, y) {
+    //         this.id = id;
+    //         // this.move(x, y)
+    //         this.x = x;
+    //         this.y = y;
+    //     }
+    //     move (x, y) {
+    //         console.log(x, y)
+    //     }
+    // }
+
+    // class Rectangle extends Shape {
+    //     constructor (id, x, y, width, height) {
+    //         super(id, x, y);
+    //         this.width  = width;
+    //         this.height = height;
+    //     }
+    // }
+    // class Circle extends Shape {
+    //     constructor (id, x, y, radius) {
+    //         super(id, x, y);
+    //         this.radius = radius;
+    //     }
+    // }
+
+    // const obj2 = new Rectangle(1, 3, 4, 12, 30);
+    // // console.log(obj2)
+    // obj2.move(23, 26)
+
+    // function foo(){
+    //   return new Promise((resolve, reject) => {
+    //     if(1 > 2){
+    //     return  resolve(console.log("Ok"));
+    //     }
+    //     else{
+    //      return reject(console.log("err"))
+    //     }
+    //   })
+    // }
+    // foo()
+
+    // class Shape {
+    //  static default(){
+    //     return "ok";
+    //   }
+    //   static myName = "Shape";
+    // }
+    // const obj = new Shape();
+    // // console.log(obj.default())
+    // console.log(Shape.default())
+    // console.log(Shape.myName)
+
+    // const date = new Date();
+    // const hour = date.getTime()
+    // console.log(hour)
+
+    // function setFunc(obj){
+    //  const myObj = localStorage.setItem( "obj1",JSON.stringify(obj));
+    //   return  myObj;
+    // }
+    // setFunc({name:"ashraf", age:23});
+
+    // function getFunc(obj){
+    //  const myObj = JSON.parse(localStorage.getItem(obj.toString()));
+    //   return  myObj;
+    // }
+    // const obj1 = "obj1"
+    // console.log(getFunc(obj1))
+
+    // class DataSaver {
+    //   static setter(id, data){
+    //      const json = JSON.stringify(data)
+    //    return  localStorage.setItem(id, json);
+    //   }
+    //   static getter(id){
+    //    const data = localStorage.getItem(id)
+    //   return JSON.parse(data);
+    //   }
+    // }
+
+    // // DataSaver.setter("object", {name: "asrhaf", age:23});
+    //  const obj = DataSaver.getter("object");
+    // if(obj){
+    //   console.log(obj)
+    // }
+
+    // Getter And Setter
+
+    // class DataSaver {
+
+    //   constructor([...price]){
+    //     this.price = price;
+    //   }
+    // //  getTotal(){
+    // //     return this.price.reduce((previous, current) =>{
+    // //       return previous + current;
+    // //     }, 0)
+    // //   }
+    // set val(str){
+    //   if(str.slice(0, 1) === "A"){
+    //   this._val = str;
+    //   }
+    // }
+    // get val(){
+    //  return this._val;
+    // }
+
+    // get getTotal(){
+    //     return this.price.reduce((previous, current) =>{
+    //       return previous + current;
+    //     }, 0)
+    //   }
+
+    //   static setter(id, data){
+    //      const json = JSON.stringify(data)
+    //    return  localStorage.setItem(id, json);
+    //   }
+    //   static getter(id){
+    //    const data = localStorage.getItem(id)
+    //   return JSON.parse(data);
+    //   }
+    // }
+
+    // const data = new DataSaver([130, 140, 150]);
+    // // data.getTotal = 120;
+    // // data.price = [120,120]
+    // data.val = "Apple and banana"
+    // data.val = "Mango"
+    // console.log(data.getTotal)
+    // console.log(data.val)
+
+    // setInterval(() => {
+    // console.log("ashraf")
+    // }, 1000)
+
+    // setTimeout(() => {
+    // console.log("ashraf")
+    // }, 3000)
+
+    // With CallBack
+    // function count(times, cb) {
+    //   const interval = setInterval(function () {
+    //     console.log("called");
+    //   }, 1000)
+    //   setTimeout(function () {
+    //     clearInterval(interval);
+    //     cb()
+    //   }, times * 1000)
+    // }
+
+    // // CallBack Hell
+    // count(3, function () {
+    //   count(3, function () {
+    //     count(3, function () {
+    //       count(3, function () {
+    //         count(3, function () {
+    //           count(3, function () {
+    //             count(3, function () {
+    //               count(3, function () {
+    //                 count(3, function () {
+    //                   count(3, function () {
+    //                     count(3, function () {
+    //                       count(3, function () {
+    //                         count(3, function () {
+    //                           count(3, function () {
+    //                             count(3, function () {
+    //                               count(3, function () {
+    //                                 count(3, function () {
+    //                                   count(3, function () {
+    //                                     count(3, function () {
+    //                                       count(3, function () {
+    //                                         count(3, function () {
+    //                                           console.log("Done")
+    //                                         })
+    //                                       })
+    //                                     })
+    //                                   })
+    //                                 })
+    //                               })
+    //                             })
+    //                           })
+    //                         })
+    //                       })
+    //                     })
+    //                   })
+    //                 })
+    //               })
+    //             })
+    //           })
+    //         })
+    //       })
+    //     })
+    //   })
+    // })
+
+    // Promises
+//     const arr = ["Apple", "Mango","Orange", "Water Melon"]
+// function myCount(times){
+//   return new Promise((resolve, reject) => {
+//     const interval = setInterval(function () {
+//         console.log("called");
+//       }, 1000)
+//       setTimeout(function () {
+//         clearInterval(interval);
+//         // resolve(arr)
+//         reject()
+//       }, times * 1000)
+//   })
+// }
+// myCount(3).then(data => {console.log(data)}).catch((err) => {console.log("Error")})
+
+  </script>
+</body>
+
+</html>
